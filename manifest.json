@@ -1,0 +1,11 @@
+{
+	"name":"Névnap App",
+	"description":"Ez a bővítmény megmutatja a napi névnapokat, és Wikipédia linkekkel szolgál a nevekre.",
+	"version":"1.0",
+	"manifest_version": 2,
+	"browser_action":{
+		"default_popup":"popup.html",
+		"default_icon":"ico.png"
+	},
+	"permissions":["tabs","https://hu.wikipedia.org/"]
+}
