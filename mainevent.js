@@ -146,10 +146,13 @@ function kiir () {
  var ho = ido.getMonth()+1;
  var nap = ido.getDate();
  var nevek = havinev(ev,ho,nap).split(", ");
+ if(nevek.length<2){
+  var nev ="<span id='nev1' title='Lásd Wikipédia'>"+nevek[0]+"</span>";
+ }else{
  //<span id='nev1' title='Lásd Wikipédia' onclick='openLink("+nevek[0]+")'>"+nevek[0]+"</span>, 
- var nev1 = "<span id='nev1' title='Lásd Wikipédia'>"+nevek[0]+"</span>, ";
- var nev2 = "<span id='nev2' title='Lásd Wikipédia'>"+nevek[1]+"</span>";
-document.getElementById("nevek").innerHTML = "<img src='nevnap.jpg'/><br>Ma <span id='nevek'>"+nev1+nev2+"</span> névnap van."
+ var nev = "<span id='nev1' title='Lásd Wikipédia'>"+nevek[0]+"</span>"+"<span id='nev2' title='Lásd Wikipédia'>"+nevek[1]+"</span>";
+}
+document.getElementById("nevek").innerHTML = "<img src='nevnap.jpg'/><br>Ma <span id='nevek'>"+nev+"</span> névnap van."
 }
 window.onload=function(){
   kiir();
